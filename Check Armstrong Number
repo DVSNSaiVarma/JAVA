@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        String num = scanner.nextLine();
+        int order = num.length();
+        int sum = 0;
+        for (int i = 0; i < order; i++) {
+            sum += Math.pow(Integer.parseInt(String.valueOf(num.charAt(i))), order);
+        }
+        if (sum == Integer.parseInt(num)) {
+            System.out.println(num + " is an Armstrong number");
+        } else {
+            System.out.println(num + " is not an Armstrong number");
+        }
+    }
+}
